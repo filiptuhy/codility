@@ -1,0 +1,15 @@
+def solution(S, P, Q):
+    resulto = []
+    conversion = {'A': 1, 'C': 2, 'G': 3, 'T': 4}
+    for i in range(len(P)):
+        if P[i] == Q[i]:
+             resulto.append(conversion[S[P[i]]])
+        elif 'A' in S[P[i]:Q[i]+1]:
+               resulto.append(1)
+        elif 'C' in S[P[i]:Q[i]+1]:
+                resulto.append(2)
+        elif 'G' in S[P[i]:Q[i]+1]:
+                resulto.append(3)
+        elif 'T' in S[P[i]:Q[i]+1]:
+                resulto.append(4)
+    return resulto

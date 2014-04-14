@@ -1,0 +1,12 @@
+def solution(N, A):
+    counterz = [0] * N
+    max = 0
+    print maxWas
+    for a in A:
+        if a >= 1 and a <= N:
+            counterz[a-1] +=1
+            if max < counterz[a-1]:
+                max = counterz[a-1]
+        if a == N+1:
+             counterz = [max] * N
+    return counterz
